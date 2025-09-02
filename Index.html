@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="app-header">
+      <h1>Weather App</h1>
+      <p class="subtitle">Check the current weather in your city</p>
+    </header>
+
+    <!-- Search Box -->
+    <section class="search-box">
+      <input type="text" id="search-txt" placeholder="Enter city name...">
+      <button id="search-btn">Search</button>
+    </section>
+
+    <!-- Weather Info -->
+    <section class="info">
+      <h2 id="city-name">--</h2>
+      <div class="icon-wrapper">
+        <img id="weather-icon" src="https://openweathermap.org/img/w" alt="Cloud Icon">
+      </div>
+      <p id="temp">-- °C</p>
+      <p id="humidity-div">-- % Humidity</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Powered by <a href="https://openweathermap.org/" target="_blank">OpenWeather</a></p>
+    </footer>
+  </div>
+
+  <script src="APIkey.js"></script>
+</body>
+</html>

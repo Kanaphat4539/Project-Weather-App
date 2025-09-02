@@ -1,0 +1,136 @@
+/* ฟอนต์สวย ๆ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container กลางจอ */
+.container {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 350px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.app-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+#search-txt {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#search-txt:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+#search-btn {
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  border-radius: 0 10px 10px 0;
+  transition: 0.3s;
+}
+
+#search-btn:hover {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+/* Weather Info */
+.info h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+/* Icon wrapper */
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+#weather-icon {
+  width: 140px;
+  height: 140px;
+  transition: transform 0.3s;
+}
+
+#weather-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Temperature */
+#temp {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Humidity */
+#humidity-div {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #888;
+}
+
+.footer a {
+  color: #4facfe;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

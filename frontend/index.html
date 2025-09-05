@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="search">
+        <input type="text" id="search-txt" placeholder="City name">
+        <button id="search-btn">🔍</button>
+    </div>
+    <div class="container">
+
+        <div class="content">
+            <div class="icon">
+                <img id="cloud" src="../img/Cloud.svg" alt="">
+                <img id="sun" src="../img/Sun.svg" alt="">
+            </div>
+            <div class="right">
+                <div class="temperature">
+                    <p id="temp">-- °C</p>
+                    <p id="date">--</p>
+                    <p id="time">--</p>
+                </div>
+                <div class="divider">
+                    <div id="divider"></div>
+                </div>
+                <div class="humidity-content">
+                    <p id="humidity-div">-- % Humidity</p>
+                    <p id="city-name">--</p>
+                </div>
+            </div>
+        </div>
+        <!-- <footer class="footer">
+            <p>Powered by <a href="https://openweathermap.org/" target="_blank">OpenWeather</a></p>
+        </footer> -->
+    </div>
+    <script src="Backend/APIkey.js"></script>
+</body>
+
+</html>

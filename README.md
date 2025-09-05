@@ -1,5 +1,5 @@
 # Project-Weather-App
-project ฝึกตนกับ Bank ตัวตึง Frontend 
-----------------------------------------
+Project ฝึกตนกับ Bank ตัวตึง Frontend 
+
 Reminder:
   - เวลา commit API key ให้ save ใน .env

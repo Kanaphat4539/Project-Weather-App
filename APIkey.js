@@ -1,4 +1,4 @@
-const API_Key = process.env.API_KEY;
+const API_Key = c35e1d0ef3824042a7285b3b829a4084;
 const searchButton = document.querySelector("#search-btn");
 const searchInput = document.querySelector("#search-txt");
 const cityName = document.querySelector("#city-name");

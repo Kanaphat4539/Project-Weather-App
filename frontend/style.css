@@ -40,7 +40,7 @@ body {
 /* ===== Container ===== */
 .container {
   margin-top: 60px;
-  margin-bottom: 15rem;
+  margin-bottom: 12rem;
   display: flex;
   justify-content: center;
 }

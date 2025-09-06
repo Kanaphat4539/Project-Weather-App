@@ -4,7 +4,7 @@ const searchInput = document.querySelector("#search-txt");
 const DateNow = document.querySelector("#date");
 const timeNow = document.querySelector("#time");
 const cityName = document.querySelector("#city-name");
-// const icon = document.querySelector("#weather-icon");
+//const icon = document.querySelector("#weather-icon");
 const temperature = document.querySelector("#temp");
 const humidity = document.querySelector("#humidity-div");
 
@@ -40,9 +40,9 @@ updateTime();
 function theResponse(response){
     const jsonObject = JSON.parse(response);
     cityName.innerHTML = jsonObject.name;
-    // icon.src = "https://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
+    //icon.src = "https://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
     temperature.innerHTML = Math.round(jsonObject.main.temp - 273.15) + "°C";
-    humidity.innerHTML = jsonObject.main.humidity + "%";
+    humidity.innerHTML = "Humidity: " + jsonObject.main.humidity + "%";
 
 }
 function httpRequestAsync(url, callback){

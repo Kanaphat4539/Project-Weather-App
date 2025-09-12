@@ -4,9 +4,39 @@ const searchInput = document.querySelector("#search-txt");
 const DateNow = document.querySelector("#date");
 const timeNow = document.querySelector("#time");
 const cityName = document.querySelector("#city-name");
-//const icon = document.querySelector("#weather-icon");
+// const icon = document.querySelector("#weather-icon");
 const temperature = document.querySelector("#temp");
 const humidity = document.querySelector("#humidity-div");
+const setThemeButton = document.querySelector("#switch-mode");
+const body = document.body;
+const theme = localStorage.getItem("theme");
+
+//ตั้งค่าโหมดตอนโหลดหน้า
+if (theme === "dark-mode") {
+    setTheme("dark-mode");
+} else {
+    setTheme("light-mode");
+}
+function setTheme(mode) {
+    if (mode === "dark-mode") {
+        body.classList.remove("light-mode");    
+        body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark-mode");
+    } else {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        localStorage.setItem("theme", "light-mode");
+    }
+}
+
+//ปุ่มสลับโหมด
+setThemeButton.addEventListener("click", () => {
+    if (localStorage.getItem("theme") === "light-mode") {
+        setTheme("dark-mode");
+    } else {
+        setTheme("light-mode");
+    }
+});
 
 //ปุ่มเรียกใช้
 searchButton.addEventListener("click", findWeatherDetails);
@@ -31,8 +61,8 @@ function updateTime() {
   timeNow.innerHTML = new Date().toLocaleTimeString();
 }
 
-// อัปเดตทุก 1 วินาที
-setInterval(updateTime, 1000);
+// อัปเดตทุก 1 นาที
+setInterval(updateTime, 60000);
 
 // เรียกครั้งแรกทันที
 updateTime();
@@ -40,7 +70,7 @@ updateTime();
 function theResponse(response){
     const jsonObject = JSON.parse(response);
     cityName.innerHTML = jsonObject.name;
-    //icon.src = "https://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
+    // icon.src = "https://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
     temperature.innerHTML = Math.round(jsonObject.main.temp - 273.15) + "°C";
     humidity.innerHTML = "Humidity: " + jsonObject.main.humidity + "%";
 

@@ -11,7 +11,6 @@ const setThemeButton = document.querySelector("#switch-mode");
 const body = document.body;
 const theme = localStorage.getItem("theme");
 
-//ตั้งค่าโหมดตอนโหลดหน้า
 if (theme === "dark-mode") {
     setTheme("dark-mode");
 } else {
@@ -29,7 +28,6 @@ function setTheme(mode) {
     }
 }
 
-//ปุ่มสลับโหมด
 setThemeButton.addEventListener("click", () => {
     if (localStorage.getItem("theme") === "light-mode") {
         setTheme("dark-mode");
@@ -38,11 +36,9 @@ setThemeButton.addEventListener("click", () => {
     }
 });
 
-//ปุ่มเรียกใช้
 searchButton.addEventListener("click", findWeatherDetails);
 searchInput.addEventListener("keypress", EnterPressed);
 
-//สร้างฟังชั่นเรียกข้อมูล จาก API
 function EnterPressed(event){
     if (event.key === "Enter") {
         findWeatherDetails();
@@ -61,10 +57,8 @@ function updateTime() {
   timeNow.innerHTML = new Date().toLocaleTimeString();
 }
 
-// อัปเดตทุก 1 นาที
 setInterval(updateTime, 60000);
 
-// เรียกครั้งแรกทันที
 updateTime();
 
 function theResponse(response){

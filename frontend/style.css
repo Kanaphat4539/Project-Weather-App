@@ -20,6 +20,14 @@ body.light-mode {
   color: #333;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
 .search {
   display: flex;
   align-items: center;
@@ -27,6 +35,38 @@ body.light-mode {
   margin-top: 50px;
 }
 /* ===== Search Bar ===== */
+
+#switch-mode  {visibility: hidden;}
+
+label {
+  cursor: pointer;
+  text-indent: -2000px;
+  width: 60px;
+  height: 2rem;
+  background: grey;
+  border-radius: 200px;
+  position: relative;
+}
+label:after{
+  content: "";
+  position: absolute;
+  top: 1.5px;
+  left: 2px;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: white;
+  border-radius: 90px;
+  transition: 0.4s;
+}
+
+#switch-mode:checked + label{
+  background: orange;
+}
+
+#switch-mode:checked + label:after {
+  left: calc(100% - 1.5px);
+  transform: translateX(-100%);
+}
 
 #switch-mode {
   font-size: 30px;
@@ -51,6 +91,7 @@ body.light-mode {
   background: none;
   border: none;
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 
